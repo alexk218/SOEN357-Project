@@ -1,0 +1,223 @@
+<html>
+<head>
+    <title>Nutrition Tracker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-blue-900 text-white">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="w-16 bg-blue-800 flex flex-col items-center py-4 space-y-4">
+            <div class="bg-blue-600 p-3 rounded-full">
+                <i class="fas fa-home text-white"></i>
+            </div>
+            <div class="bg-blue-600 p-3 rounded-full">
+                <i class="fas fa-utensils text-white"></i>
+            </div>
+            <div class="bg-blue-600 p-3 rounded-full">
+                <i class="fas fa-dumbbell text-white"></i>
+            </div>
+            <div class="bg-blue-600 p-3 rounded-full">
+                <i class="fas fa-robot text-white"></i>
+            </div>
+            <div class="mt-auto">
+                <img src="https://placehold.co/50x50" alt="Profile picture" class="rounded-full">
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-3xl font-bold">Nutrition Tracker</h1>
+                <div class="text-lg">Today <i class="fas fa-chevron-down"></i></div>
+            </div>
+
+            <!-- Meals Section -->
+            <div class="space-y-8">
+                <!-- Breakfast -->
+                <div class="bg-blue-700 p-6 rounded-lg">
+                    <h2 class="text-xl font-semibold mb-4">Breakfast</h2>
+                    <div class="flex space-x-4">
+                        <!-- Add Item -->
+                        <div class="flex flex-col items-center justify-center bg-blue-600 p-4 rounded-lg">
+                            <i class="fas fa-plus text-2xl"></i>
+                        </div>
+                        <!-- Item 1 -->
+                        <div class="flex-1 bg-blue-800 p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span>Vector Kellogg's</span>
+                                <div class="flex space-x-2">
+                                    <span>Serving Size</span>
+                                    <span class="bg-blue-600 px-2 py-1 rounded">1 cup</span>
+                                    <span># of Servings</span>
+                                    <span class="bg-blue-600 px-2 py-1 rounded">1</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-2">
+                                    <div class="bg-blue-600 p-2 rounded-full">
+                                        <span>215</span>
+                                        <span>cal</span>
+                                    </div>
+                                    <div class="text-sm">
+                                        <span>5.5g Protein</span>
+                                        <span>2.0g Fat</span>
+                                        <span>44g Carbs</span>
+                                    </div>
+                                </div>
+                                <div class="w-1/2 bg-gray-400 h-2 rounded-full">
+                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="flex-1 bg-blue-800 p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span>Milk 3.25% Quebon</span>
+                                <div class="flex space-x-2">
+                                    <span>Serving Size</span>
+                                    <span class="bg-blue-600 px-2 py-1 rounded">1 cup</span>
+                                    <span># of Servings</span>
+                                    <span class="bg-blue-600 px-2 py-1 rounded">1</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-2">
+                                    <div class="bg-blue-600 p-2 rounded-full">
+                                        <span>160</span>
+                                        <span>cal</span>
+                                    </div>
+                                    <div class="text-sm">
+                                        <span>9g Protein</span>
+                                        <span>12g Fat</span>
+                                        <span>10g Carbs</span>
+                                    </div>
+                                </div>
+                                <div class="w-1/2 bg-gray-400 h-2 rounded-full">
+                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="flex-1 bg-blue-800 p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span>Clementines</span>
+                                <div class="flex space-x-2">
+                                    <span>Serving Size</span>
+                                    <span class="bg-blue-600 px-2 py-1 rounded">1</span>
+                                    <span># of Servings</span>
+                                    <span class="bg-blue-600 px-2 py-1 rounded">1</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-2">
+                                    <div class="bg-blue-600 p-2 rounded-full">
+                                        <span>80</span>
+                                        <span>cal</span>
+                                    </div>
+                                    <div class="text-sm">
+                                        <span>0.5g Protein</span>
+                                        <span>0g Fat</span>
+                                        <span>14g Carbs</span>
+                                    </div>
+                                </div>
+                                <div class="w-1/2 bg-gray-400 h-2 rounded-full">
+                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lunch -->
+                <div class="bg-blue-700 p-6 rounded-lg">
+                    <h2 class="text-xl font-semibold mb-4">Lunch</h2>
+                    <div class="flex space-x-4">
+                        <!-- Add Item -->
+                        <div class="flex flex-col items-center justify-center bg-blue-600 p-4 rounded-lg">
+                            <i class="fas fa-plus text-2xl"></i>
+                        </div>
+                        <!-- Item 1 -->
+                        <div class="flex-1 bg-blue-800 p-4 rounded-lg">
+                            <div class="flex justify-between items-center mb-2">
+                                <span>Quick Add</span>
+                                <div class="flex space-x-2">
+                                    <span>Serving Size</span>
+                                    <span class="bg-blue-600 px-2 py-1 rounded">-</span>
+                                    <span># of Servings</span>
+                                    <span class="bg-blue-600 px-2 py-1 rounded">-</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center space-x-2">
+                                    <div class="bg-blue-600 p-2 rounded-full">
+                                        <span>600</span>
+                                        <span>cal</span>
+                                    </div>
+                                    <div class="text-sm">
+                                        <span>-g Protein</span>
+                                        <span>-g Fat</span>
+                                        <span>-g Carbs</span>
+                                    </div>
+                                </div>
+                                <div class="w-1/2 bg-gray-400 h-2 rounded-full">
+                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Empty Items -->
+                        <div class="flex-1 bg-blue-800 p-4 rounded-lg"></div>
+                        <div class="flex-1 bg-blue-800 p-4 rounded-lg"></div>
+                    </div>
+                </div>
+
+                <!-- Dinner -->
+                <div class="bg-blue-700 p-6 rounded-lg">
+                    <h2 class="text-xl font-semibold mb-4">Dinner</h2>
+                    <div class="flex space-x-4">
+                        <!-- Add Item -->
+                        <div class="flex flex-col items-center justify-center bg-blue-600 p-4 rounded-lg">
+                            <i class="fas fa-plus text-2xl"></i>
+                        </div>
+                        <!-- Empty Items -->
+                        <div class="flex-1 bg-blue-800 p-4 rounded-lg"></div>
+                        <div class="flex-1 bg-blue-800 p-4 rounded-lg"></div>
+                        <div class="flex-1 bg-blue-800 p-4 rounded-lg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Right -->
+        <div class="w-1/4 p-8 space-y-8">
+            <!-- Total Calorie Taken -->
+            <div class="bg-gray-700 p-6 rounded-lg">
+                <h2 class="text-xl font-semibold mb-4">Total Calorie Taken</h2>
+                <div class="flex justify-between items-center mb-2">
+                    <span>0</span>
+                    <span>1850 cal</span>
+                </div>
+                <div class="w-full bg-gray-400 h-4 rounded-full">
+                    <div class="bg-green-500 h-4 rounded-full" style="width: 50%;"></div>
+                </div>
+                <div class="text-right mt-2">Goal</div>
+            </div>
+
+            <!-- Ask Arnold -->
+            <div class="bg-blue-600 p-6 rounded-lg">
+                <h2 class="text-xl font-semibold mb-4">Ask Arnold <i class="fas fa-robot"></i></h2>
+                <p class="mb-4">Ask Arnold, our friendly AI friend, for any nutrition tips or to make you a meal prep!</p>
+                <div class="flex items-center bg-white text-blue-600 p-2 rounded-lg">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search" class="bg-transparent flex-1 ml-2 outline-none">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
