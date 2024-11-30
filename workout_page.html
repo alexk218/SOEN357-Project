@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,58 +10,115 @@
 <body class="bg-blue-900 text-white font-sans">
     <div class="flex h-screen">
         <!-- Sidebar -->
-        <div class="flex flex-col justify-between p-4 bg-gray-800 rounded-r-lg">
+        <div class="flex flex-col justify-between p-4 bg-gray-800 rounded-r-lg w-20 sm:w-24 md:w-28">
+            <!-- Top Section -->
             <div class="space-y-4">
-                <div class="p-4 bg-gray-600 rounded-lg">
-                    <i class="fas fa-home text-2xl"></i>
-                </div>
-                <div class="p-4 bg-gray-600 rounded-lg">
-                    <i class="fas fa-utensils text-2xl"></i>
-                </div>
-                <div class="p-4 bg-blue-600 rounded-lg">
-                    <i class="fas fa-dumbbell text-2xl"></i>
-                </div>
-                <div class="p-4 bg-gray-600 rounded-lg">
-                    <i class="fas fa-robot text-2xl"></i>
-                </div>
+                <a href="index.html" class="flex justify-center items-center p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition duration-300">
+                    <i class="fas fa-home text-xl sm:text-2xl"></i>
+                </a>
+                <a href="nutrition_page.html" class="flex justify-center items-center p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition duration-300">
+                    <i class="fas fa-utensils text-xl sm:text-2xl"></i>
+                </a>
+                <a href="workout_page.html" class="flex justify-center items-center p-4 bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300">
+                    <i class="fas fa-dumbbell text-xl sm:text-2xl"></i>
+                </a>
+                <a href="ai_coach_page.html" class="flex justify-center items-center p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition duration-300">
+                    <i class="fas fa-robot text-xl sm:text-2xl"></i>
+                </a>
             </div>
+            <!-- Bottom Section -->
             <div class="space-y-4">
-                <div class="p-4 bg-gray-600 rounded-lg">
-                    <i class="fas fa-sign-out-alt text-2xl"></i>
-                </div>
-                <div class="p-4 bg-gray-600 rounded-lg">
-                    <img src="https://placehold.co/50x50" alt="Profile picture" class="rounded-full">
-                </div>
+                <a href="#" class="flex justify-center items-center p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition duration-300">
+                    <i class="fas fa-sign-out-alt text-xl sm:text-2xl"></i>
+                </a>
+                <a href="profile.html" class="flex justify-center items-center p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition duration-300">
+                    <img src="cbum_profile_pic.jpg" alt="Profile picture" class="rounded-full w-8 h-8 sm:w-10 sm:h-10">
+                </a>
             </div>
         </div>
         <!-- Main Content -->
-        <div class="flex-1 p-8">
-            <div class="flex justify-between items-center mb-8">
-                <h1 class="text-3xl font-bold">Workout Tracker</h1>
+        <div class="flex-1 p-6 sm:p-8 md:p-10 overflow-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl sm:text-3xl font-bold">Workout Tracker</h1>
                 <div class="relative">
-                    <button class="text-lg">Today <i class="fas fa-chevron-down"></i></button>
+                    <button class="text-lg flex items-center space-x-2 hover:text-gray-300 transition duration-300">
+                        <span>Today</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
                 </div>
             </div>
-            <div class="space-y-8">
-                <!-- Total Calorie Burnt -->
-                <div class="p-6 bg-gray-700 rounded-lg">
-                    <h2 class="text-xl font-semibold mb-4">Total Calorie Burnt</h2>
-                    <div class="relative h-6 bg-gray-500 rounded-full">
-                        <div class="absolute top-0 left-0 h-6 bg-green-500 rounded-full" style="width: 50%;"></div>
+            <div class="flex flex-col md:flex-row md:space-x-8">
+                <!-- Left Column -->
+                <div class="flex-1 space-y-8">
+                    <!-- Workout -->
+                    <div class="p-6 bg-gray-700 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4">Workout</h2>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <span>Bench Press</span>
+                                <div class="text-sm text-right">
+                                    <p>Weight: <span class="font-bold">175 lbs</span></p>
+                                    <p># of Reps: <span class="font-bold">6</span></p>
+                                    <p># of Sets: <span class="font-bold">4</span></p>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span>Incline Chest Press</span>
+                                <div class="text-sm text-right">
+                                    <p>Weight: <span class="font-bold">90 lbs</span></p>
+                                    <p># of Reps: <span class="font-bold">6</span></p>
+                                    <p># of Sets: <span class="font-bold">4</span></p>
+                                </div>
+                            </div>
+                            <!-- Add more workout items here -->
+                        </div>
                     </div>
-                    <div class="flex justify-between text-sm mt-2">
-                        <span>0</span>
-                        <span>500cal</span>
-                        <span>Goal</span>
+                    <!-- Cardio -->
+                    <div class="p-6 bg-gray-700 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4">Cardio</h2>
+                        <div class="flex items-center justify-between">
+                            <span>Treadmill</span>
+                            <div class="text-sm text-right">
+                                <p>Time: <span class="font-bold">20 min</span></p>
+                                <p>Speed: <span class="font-bold">10 km/h</span></p>
+                                <p>Incline: <span class="font-bold">0%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Sports -->
+                    <div class="p-6 bg-gray-700 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4">Sports</h2>
+                        <div class="flex items-center justify-between">
+                            <span>Basketball</span>
+                            <div class="text-sm text-right">
+                                <p>Time: <span class="font-bold">50 min</span></p>
+                                <p>Intensity: <span class="font-bold">5</span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Ask Arnold -->
-                <div class="p-6 bg-blue-500 rounded-lg">
-                    <h2 class="text-xl font-semibold mb-4">Ask Arnold <i class="fas fa-robot"></i></h2>
-                    <p class="mb-4">Ask Arnold, our friendly AI friend, for any workout tips or to make you a workout routine!</p>
-                    <div class="relative">
-                        <input type="text" class="w-full p-2 pl-10 rounded-full text-black" placeholder="Search...">
-                        <i class="fas fa-search absolute top-1/2 left-3 transform -translate-y-1/2 text-black"></i>
+                <!-- Right Column -->
+                <div class="w-full md:w-1/3 space-y-8 mt-8 md:mt-0">
+                    <!-- Total Calorie Burnt -->
+                    <div class="p-6 bg-gray-700 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4">Total Calorie Burnt</h2>
+                        <div class="relative h-6 bg-gray-500 rounded-full">
+                            <div class="absolute top-0 left-0 h-6 bg-green-500 rounded-full" style="width: 50%;"></div>
+                        </div>
+                        <div class="flex justify-between text-sm mt-2">
+                            <span>0</span>
+                            <span>500 cal</span>
+                            <span>Goal</span>
+                        </div>
+                    </div>
+                    <!-- Ask Arnold -->
+                    <div class="p-6 bg-blue-500 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4 flex items-center">Ask Arnold <i class="fas fa-robot ml-2"></i></h2>
+                        <p class="mb-4">Ask Arnold, our friendly AI coach, for any workout tips or to create a personalized workout routine!</p>
+                        <div class="relative">
+                            <input type="text" class="w-full p-2 pl-10 rounded-full text-black focus:outline-none" placeholder="Search...">
+                            <i class="fas fa-search absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-700"></i>
+                        </div>
                     </div>
                 </div>
             </div>
