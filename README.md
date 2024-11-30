@@ -22,3 +22,13 @@ If you're using VSCode, use the Live Server extension to launch a local server.
 If not already installed, install the extension.
 Right-click on the index.html file (or any other HTML file) in the Explorer panel.
 Select Open with Live Server.
+
+## Screenshots
+
+![Home Page](screenshots/HomePage.png)
+
+![Nutrition Dashboard](screenshots/NutritionPage.png)
+
+![Workout Dashboard](screenshots/WorkoutPage.png)
+
+![AI Coach Chat](screenshots/AICoachPage.png)
