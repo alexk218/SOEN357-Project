@@ -5,14 +5,16 @@ There are two primary ways to run this project:
 #### 1. Serving via a Local HTTP Server:
 If you have Python installed, you can quickly start a local server.
 
-**Open Terminal or Command Prompt:**
-- Windows: Press Win + R, type cmd, and hit Enter.
-- macOS/Linux: Open the Terminal application.
-**Navigate to the Project Directory:**
-`cd path/to/your/project/directory`
+Open Terminal or Command Prompt
+
+Navigate to the Project Directory.
+
 **Start the HTTP Server:**
+
 `python -m http.server 8000`
+
 This command starts a local server on port 8000. You can choose a different port if 8000 is in use.
+
 Open your web browser and navigate to http://localhost:8000.
 
 #### 2. Using Live Server Extension (VSCode):
