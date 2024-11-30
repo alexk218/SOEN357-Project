@@ -4,15 +4,27 @@
     <title>Nutrition Tracker</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
     <style>
         body {
             font-family: 'Inter', sans-serif;
         }
+        /* Modal Transition */
+        .modal {
+            transition: opacity 0.25s ease;
+        }
     </style>
 </head>
-<body class="bg-blue-900 text-white">
+<body class="bg-blue-900 text-white relative">
+    <div class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 w-11/12 sm:w-5/6 md:w-2/3 flex items-center">
+        <i class="fas fa-bell fa-lg mr-4"></i>
+        <p class="text-lg">You're doing amazing and on track!</p>
+    </div>
+
     <div class="flex h-screen">
         <!-- Sidebar -->
         <div class="flex flex-col justify-between p-4 bg-gray-800 rounded-r-lg w-20 sm:w-24 md:w-28">
@@ -44,7 +56,7 @@
         <!-- Main Content -->
         <div class="flex-1 p-6 sm:p-8 md:p-10 overflow-auto">
             <!-- Header -->
-            <div class="flex justify-between items-center mb-6">
+            <div class="flex justify-between items-center mb-6 mt-12"> <!-- Adjusted margin-top due to toast message -->
                 <h1 class="text-2xl sm:text-3xl font-bold">Nutrition Tracker</h1>
                 <div class="relative">
                     <button class="text-lg flex items-center space-x-2 hover:text-gray-300 transition duration-300">
@@ -63,7 +75,7 @@
                         <h2 class="text-xl font-semibold mb-4">Breakfast</h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             <!-- Add Item -->
-                            <div class="flex flex-col items-center justify-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition duration-300 cursor-pointer">
+                            <div class="flex flex-col items-center justify-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition duration-300 cursor-pointer" onclick="openModal('Breakfast')">
                                 <i class="fas fa-plus text-3xl"></i>
                                 <p class="mt-2">Add Item</p>
                             </div>
@@ -130,6 +142,10 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Empty Item 1 -->
+                            <div class="bg-gray-700 p-4 rounded-lg"></div>
+                            <!-- Empty Item 2 -->
+                            <div class="bg-gray-700 p-4 rounded-lg"></div>
                         </div>
                     </div>
                     <!-- Lunch -->
@@ -137,27 +153,29 @@
                         <h2 class="text-xl font-semibold mb-4">Lunch</h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             <!-- Add Item -->
-                            <div class="flex flex-col items-center justify-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition duration-300 cursor-pointer">
+                            <div class="flex flex-col items-center justify-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition duration-300 cursor-pointer" onclick="openModal('Lunch')">
                                 <i class="fas fa-plus text-3xl"></i>
                                 <p class="mt-2">Add Item</p>
                             </div>
                             <!-- Item 1 -->
                             <div class="bg-gray-700 p-4 rounded-lg">
                                 <div class="flex justify-between items-center mb-2">
-                                    <span class="font-semibold">Quick Add</span>
+                                    <span class="font-semibold">Chicken thigh</span>
                                 </div>
                                 <div class="flex justify-between items-center">
                                     <div class="text-sm">
                                         <p>Calories: <span class="font-bold">600 cal</span></p>
-                                        <p>Protein: <span class="font-bold">-</span></p>
-                                        <p>Fat: <span class="font-bold">-</span></p>
-                                        <p>Carbs: <span class="font-bold">-</span></p>
+                                        <p>Protein: <span class="font-bold">42.0g</span></p>
+                                        <p>Fat: <span class="font-bold">2.0g</span></p>
+                                        <p>Carbs: <span class="font-bold">0g</span></p>
                                     </div>
                                     <div class="w-1/3 bg-gray-500 h-2 rounded-full">
-                                        <div class="bg-green-500 h-2 rounded-full" style="width: 50%;"></div>
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 100%;"></div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Empty Item 1 -->
+                            <div class="bg-gray-700 p-4 rounded-lg"></div>
                         </div>
                     </div>
                     <!-- Dinner -->
@@ -165,12 +183,13 @@
                         <h2 class="text-xl font-semibold mb-4">Dinner</h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             <!-- Add Item -->
-                            <div class="flex flex-col items-center justify-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition duration-300 cursor-pointer">
+                            <div class="flex flex-col items-center justify-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition duration-300 cursor-pointer" onclick="openModal('Dinner')">
                                 <i class="fas fa-plus text-3xl"></i>
                                 <p class="mt-2">Add Item</p>
                             </div>
-                            <!-- Empty Items -->
+                            <!-- Empty Item 1 -->
                             <div class="bg-gray-700 p-4 rounded-lg"></div>
+                            <!-- Empty Item 2 -->
                             <div class="bg-gray-700 p-4 rounded-lg"></div>
                         </div>
                     </div>
@@ -201,7 +220,52 @@
                 </div>
             </div>
         </div>
-    </div>
 
-</body>
+        <!-- Add Item Modal -->
+        <div id="addItemModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+            <div class="bg-blue-600 rounded-lg p-6 w-11/12 max-w-lg relative">
+                <!-- Close Button -->
+                <button onclick="closeModal()" class="absolute top-3 right-3 text-white hover:text-gray-300">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-white text-xl" id="mealTitle">Add Item</h2>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="relative mb-6">
+                    <input type="text" placeholder="Search for a food" class="w-full p-3 pl-10 rounded-full bg-white text-gray-700 focus:outline-none">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-500"></i>
+                </div>
+                <div class="flex items-center">
+                    <div class="bg-blue-900 text-white rounded-lg p-4 flex items-center justify-center w-full cursor-pointer hover:bg-blue-800 transition duration-300">
+                        <i class="fas fa-plus text-2xl mr-2"></i>
+                        <span>Quick Add</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JavaScript for Modal -->
+        <script>
+            function openModal(mealName) {
+                document.getElementById('addItemModal').classList.remove('hidden');
+                document.getElementById('addItemModal').classList.add('flex');
+                document.getElementById('mealTitle').innerText = 'Add Item to ' + mealName;
+            }
+
+            function closeModal() {
+                document.getElementById('addItemModal').classList.add('hidden');
+                document.getElementById('addItemModal').classList.remove('flex');
+            }
+
+            // Close modal when clicking outside of it
+            window.onclick = function(event) {
+                const modal = document.getElementById('addItemModal');
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+        </script>
+
+    </body>
 </html>
