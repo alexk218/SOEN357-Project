@@ -1,223 +1,207 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Nutrition Tracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
 <body class="bg-blue-900 text-white">
-    <div class="flex">
+    <div class="flex h-screen">
         <!-- Sidebar -->
-        <div class="w-16 bg-blue-800 flex flex-col items-center py-4 space-y-4">
-            <div class="bg-blue-600 p-3 rounded-full">
-                <i class="fas fa-home text-white"></i>
+        <div class="flex flex-col justify-between p-4 bg-gray-800 rounded-r-lg w-20 sm:w-24 md:w-28">
+            <!-- Top Section -->
+            <div class="space-y-4">
+                <a href="index.html" class="flex justify-center items-center p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition duration-300">
+                    <i class="fas fa-home text-xl sm:text-2xl"></i>
+                </a>
+                <a href="nutrition_page.html" class="flex justify-center items-center p-4 bg-blue-600 rounded-lg hover:bg-blue-500 transition duration-300">
+                    <i class="fas fa-utensils text-xl sm:text-2xl"></i>
+                </a>
+                <a href="workout_page.html" class="flex justify-center items-center p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition duration-300">
+                    <i class="fas fa-dumbbell text-xl sm:text-2xl"></i>
+                </a>
+                <a href="ai_coach_page.html" class="flex justify-center items-center p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition duration-300">
+                    <i class="fas fa-robot text-xl sm:text-2xl"></i>
+                </a>
             </div>
-            <div class="bg-blue-600 p-3 rounded-full">
-                <i class="fas fa-utensils text-white"></i>
-            </div>
-            <div class="bg-blue-600 p-3 rounded-full">
-                <i class="fas fa-dumbbell text-white"></i>
-            </div>
-            <div class="bg-blue-600 p-3 rounded-full">
-                <i class="fas fa-robot text-white"></i>
-            </div>
-            <div class="mt-auto">
-                <img src="https://placehold.co/50x50" alt="Profile picture" class="rounded-full">
+            <!-- Bottom Section -->
+            <div class="space-y-4">
+                <a href="#" class="flex justify-center items-center p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition duration-300">
+                    <i class="fas fa-sign-out-alt text-xl sm:text-2xl"></i>
+                </a>
+                <a href="profile.html" class="flex justify-center items-center p-4 bg-gray-600 rounded-lg hover:bg-gray-500 transition duration-300">
+                    <img src="cbum_profile_pic.jpg" alt="Profile picture" class="rounded-full w-8 h-8 sm:w-10 sm:h-10">
+                </a>
             </div>
         </div>
-
         <!-- Main Content -->
-        <div class="flex-1 p-8">
-            <div class="flex justify-between items-center mb-8">
-                <h1 class="text-3xl font-bold">Nutrition Tracker</h1>
-                <div class="text-lg">Today <i class="fas fa-chevron-down"></i></div>
+        <div class="flex-1 p-6 sm:p-8 md:p-10 overflow-auto">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl sm:text-3xl font-bold">Nutrition Tracker</h1>
+                <div class="relative">
+                    <button class="text-lg flex items-center space-x-2 hover:text-gray-300 transition duration-300">
+                        <span>Today</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                </div>
             </div>
-
-            <!-- Meals Section -->
-            <div class="space-y-8">
-                <!-- Breakfast -->
-                <div class="bg-blue-700 p-6 rounded-lg">
-                    <h2 class="text-xl font-semibold mb-4">Breakfast</h2>
-                    <div class="flex space-x-4">
-                        <!-- Add Item -->
-                        <div class="flex flex-col items-center justify-center bg-blue-600 p-4 rounded-lg">
-                            <i class="fas fa-plus text-2xl"></i>
-                        </div>
-                        <!-- Item 1 -->
-                        <div class="flex-1 bg-blue-800 p-4 rounded-lg">
-                            <div class="flex justify-between items-center mb-2">
-                                <span>Vector Kellogg's</span>
-                                <div class="flex space-x-2">
-                                    <span>Serving Size</span>
-                                    <span class="bg-blue-600 px-2 py-1 rounded">1 cup</span>
-                                    <span># of Servings</span>
-                                    <span class="bg-blue-600 px-2 py-1 rounded">1</span>
-                                </div>
+            <!-- Content -->
+            <div class="flex flex-col md:flex-row md:space-x-8">
+                <!-- Left Column -->
+                <div class="flex-1 space-y-8">
+                    <!-- Meals Section -->
+                    <!-- Breakfast -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4">Breakfast</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <!-- Add Item -->
+                            <div class="flex flex-col items-center justify-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition duration-300 cursor-pointer">
+                                <i class="fas fa-plus text-3xl"></i>
+                                <p class="mt-2">Add Item</p>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center space-x-2">
-                                    <div class="bg-blue-600 p-2 rounded-full">
-                                        <span>215</span>
-                                        <span>cal</span>
+                            <!-- Item 1 -->
+                            <div class="bg-gray-700 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold">Vector Kellogg's</span>
+                                    <div class="flex space-x-2 text-sm">
+                                        <span>Serving Size:</span>
+                                        <span class="bg-gray-600 px-2 py-1 rounded">1 cup</span>
                                     </div>
+                                </div>
+                                <div class="flex justify-between items-center">
                                     <div class="text-sm">
-                                        <span>5.5g Protein</span>
-                                        <span>2.0g Fat</span>
-                                        <span>44g Carbs</span>
+                                        <p>Calories: <span class="font-bold">215 cal</span></p>
+                                        <p>Protein: <span class="font-bold">5.5g</span></p>
+                                        <p>Fat: <span class="font-bold">2.0g</span></p>
+                                        <p>Carbs: <span class="font-bold">44g</span></p>
+                                    </div>
+                                    <div class="w-1/3 bg-gray-500 h-2 rounded-full">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 50%;"></div>
                                     </div>
                                 </div>
-                                <div class="w-1/2 bg-gray-400 h-2 rounded-full">
-                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 50%;"></div>
-                                </div>
                             </div>
-                        </div>
-                        <!-- Item 2 -->
-                        <div class="flex-1 bg-blue-800 p-4 rounded-lg">
-                            <div class="flex justify-between items-center mb-2">
-                                <span>Milk 3.25% Quebon</span>
-                                <div class="flex space-x-2">
-                                    <span>Serving Size</span>
-                                    <span class="bg-blue-600 px-2 py-1 rounded">1 cup</span>
-                                    <span># of Servings</span>
-                                    <span class="bg-blue-600 px-2 py-1 rounded">1</span>
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center space-x-2">
-                                    <div class="bg-blue-600 p-2 rounded-full">
-                                        <span>160</span>
-                                        <span>cal</span>
+                            <!-- Item 2 -->
+                            <div class="bg-gray-700 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold">Milk 3.25% Quebon</span>
+                                    <div class="flex space-x-2 text-sm">
+                                        <span>Serving Size:</span>
+                                        <span class="bg-gray-600 px-2 py-1 rounded">1 cup</span>
                                     </div>
+                                </div>
+                                <div class="flex justify-between items-center">
                                     <div class="text-sm">
-                                        <span>9g Protein</span>
-                                        <span>12g Fat</span>
-                                        <span>10g Carbs</span>
+                                        <p>Calories: <span class="font-bold">160 cal</span></p>
+                                        <p>Protein: <span class="font-bold">9g</span></p>
+                                        <p>Fat: <span class="font-bold">12g</span></p>
+                                        <p>Carbs: <span class="font-bold">10g</span></p>
+                                    </div>
+                                    <div class="w-1/3 bg-gray-500 h-2 rounded-full">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 50%;"></div>
                                     </div>
                                 </div>
-                                <div class="w-1/2 bg-gray-400 h-2 rounded-full">
-                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 50%;"></div>
-                                </div>
                             </div>
-                        </div>
-                        <!-- Item 3 -->
-                        <div class="flex-1 bg-blue-800 p-4 rounded-lg">
-                            <div class="flex justify-between items-center mb-2">
-                                <span>Clementines</span>
-                                <div class="flex space-x-2">
-                                    <span>Serving Size</span>
-                                    <span class="bg-blue-600 px-2 py-1 rounded">1</span>
-                                    <span># of Servings</span>
-                                    <span class="bg-blue-600 px-2 py-1 rounded">1</span>
-                                </div>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center space-x-2">
-                                    <div class="bg-blue-600 p-2 rounded-full">
-                                        <span>80</span>
-                                        <span>cal</span>
+                            <!-- Item 3 -->
+                            <div class="bg-gray-700 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold">Clementines</span>
+                                    <div class="flex space-x-2 text-sm">
+                                        <span>Serving Size:</span>
+                                        <span class="bg-gray-600 px-2 py-1 rounded">1</span>
                                     </div>
+                                </div>
+                                <div class="flex justify-between items-center">
                                     <div class="text-sm">
-                                        <span>0.5g Protein</span>
-                                        <span>0g Fat</span>
-                                        <span>14g Carbs</span>
+                                        <p>Calories: <span class="font-bold">80 cal</span></p>
+                                        <p>Protein: <span class="font-bold">0.5g</span></p>
+                                        <p>Fat: <span class="font-bold">0g</span></p>
+                                        <p>Carbs: <span class="font-bold">14g</span></p>
                                     </div>
-                                </div>
-                                <div class="w-1/2 bg-gray-400 h-2 rounded-full">
-                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 50%;"></div>
+                                    <div class="w-1/3 bg-gray-500 h-2 rounded-full">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 50%;"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Lunch -->
-                <div class="bg-blue-700 p-6 rounded-lg">
-                    <h2 class="text-xl font-semibold mb-4">Lunch</h2>
-                    <div class="flex space-x-4">
-                        <!-- Add Item -->
-                        <div class="flex flex-col items-center justify-center bg-blue-600 p-4 rounded-lg">
-                            <i class="fas fa-plus text-2xl"></i>
-                        </div>
-                        <!-- Item 1 -->
-                        <div class="flex-1 bg-blue-800 p-4 rounded-lg">
-                            <div class="flex justify-between items-center mb-2">
-                                <span>Quick Add</span>
-                                <div class="flex space-x-2">
-                                    <span>Serving Size</span>
-                                    <span class="bg-blue-600 px-2 py-1 rounded">-</span>
-                                    <span># of Servings</span>
-                                    <span class="bg-blue-600 px-2 py-1 rounded">-</span>
-                                </div>
+                    <!-- Lunch -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4">Lunch</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <!-- Add Item -->
+                            <div class="flex flex-col items-center justify-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition duration-300 cursor-pointer">
+                                <i class="fas fa-plus text-3xl"></i>
+                                <p class="mt-2">Add Item</p>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <div class="flex items-center space-x-2">
-                                    <div class="bg-blue-600 p-2 rounded-full">
-                                        <span>600</span>
-                                        <span>cal</span>
-                                    </div>
+                            <!-- Item 1 -->
+                            <div class="bg-gray-700 p-4 rounded-lg">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold">Quick Add</span>
+                                </div>
+                                <div class="flex justify-between items-center">
                                     <div class="text-sm">
-                                        <span>-g Protein</span>
-                                        <span>-g Fat</span>
-                                        <span>-g Carbs</span>
+                                        <p>Calories: <span class="font-bold">600 cal</span></p>
+                                        <p>Protein: <span class="font-bold">-</span></p>
+                                        <p>Fat: <span class="font-bold">-</span></p>
+                                        <p>Carbs: <span class="font-bold">-</span></p>
                                     </div>
-                                </div>
-                                <div class="w-1/2 bg-gray-400 h-2 rounded-full">
-                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 50%;"></div>
+                                    <div class="w-1/3 bg-gray-500 h-2 rounded-full">
+                                        <div class="bg-green-500 h-2 rounded-full" style="width: 50%;"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Empty Items -->
-                        <div class="flex-1 bg-blue-800 p-4 rounded-lg"></div>
-                        <div class="flex-1 bg-blue-800 p-4 rounded-lg"></div>
                     </div>
-                </div>
-
-                <!-- Dinner -->
-                <div class="bg-blue-700 p-6 rounded-lg">
-                    <h2 class="text-xl font-semibold mb-4">Dinner</h2>
-                    <div class="flex space-x-4">
-                        <!-- Add Item -->
-                        <div class="flex flex-col items-center justify-center bg-blue-600 p-4 rounded-lg">
-                            <i class="fas fa-plus text-2xl"></i>
+                    <!-- Dinner -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4">Dinner</h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <!-- Add Item -->
+                            <div class="flex flex-col items-center justify-center bg-gray-700 p-4 rounded-lg hover:bg-gray-600 transition duration-300 cursor-pointer">
+                                <i class="fas fa-plus text-3xl"></i>
+                                <p class="mt-2">Add Item</p>
+                            </div>
+                            <!-- Empty Items -->
+                            <div class="bg-gray-700 p-4 rounded-lg"></div>
+                            <div class="bg-gray-700 p-4 rounded-lg"></div>
                         </div>
-                        <!-- Empty Items -->
-                        <div class="flex-1 bg-blue-800 p-4 rounded-lg"></div>
-                        <div class="flex-1 bg-blue-800 p-4 rounded-lg"></div>
-                        <div class="flex-1 bg-blue-800 p-4 rounded-lg"></div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <!-- Sidebar Right -->
-        <div class="w-1/4 p-8 space-y-8">
-            <!-- Total Calorie Taken -->
-            <div class="bg-gray-700 p-6 rounded-lg">
-                <h2 class="text-xl font-semibold mb-4">Total Calorie Taken</h2>
-                <div class="flex justify-between items-center mb-2">
-                    <span>0</span>
-                    <span>1850 cal</span>
-                </div>
-                <div class="w-full bg-gray-400 h-4 rounded-full">
-                    <div class="bg-green-500 h-4 rounded-full" style="width: 50%;"></div>
-                </div>
-                <div class="text-right mt-2">Goal</div>
-            </div>
-
-            <!-- Ask Arnold -->
-            <div class="bg-blue-600 p-6 rounded-lg">
-                <h2 class="text-xl font-semibold mb-4">Ask Arnold <i class="fas fa-robot"></i></h2>
-                <p class="mb-4">Ask Arnold, our friendly AI friend, for any nutrition tips or to make you a meal prep!</p>
-                <div class="flex items-center bg-white text-blue-600 p-2 rounded-lg">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search" class="bg-transparent flex-1 ml-2 outline-none">
+                <!-- Right Column -->
+                <div class="w-full md:w-1/3 space-y-8 mt-8 md:mt-0">
+                    <!-- Total Calorie Intake -->
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4">Total Calorie Intake</h2>
+                        <div class="relative h-6 bg-gray-500 rounded-full">
+                            <div class="absolute top-0 left-0 h-6 bg-green-500 rounded-full" style="width: 50%;"></div>
+                        </div>
+                        <div class="flex justify-between text-sm mt-2">
+                            <span>0 cal</span>
+                            <span>1850 cal</span>
+                            <span>Goal</span>
+                        </div>
+                    </div>
+                    <!-- Ask Arnold -->
+                    <div class="bg-blue-500 p-6 rounded-lg shadow-lg">
+                        <h2 class="text-xl font-semibold mb-4 flex items-center">Ask Arnold <i class="fas fa-robot ml-2"></i></h2>
+                        <p class="mb-4">Ask Arnold, our friendly AI friend, for any nutrition tips or to create a meal plan for you!</p>
+                        <div class="relative">
+                            <input type="text" class="w-full p-2 pl-10 rounded-full text-black focus:outline-none" placeholder="Ask Arnold...">
+                            <i class="fas fa-search absolute top-1/2 left-3 transform -translate-y-1/2 text-gray-700"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </body>
 </html>
